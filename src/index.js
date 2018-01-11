@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import configureStore from './store/configureStore';
-import {once} from 'redux-when';
+import {when} from 'redux-when';
 
 const root = document.getElementById('root');
 
 const store = configureStore();
-store.dispatch(once(
+store.dispatch(when(
     state => state.test.data === 0,
     () => {
         return dispatch => {
