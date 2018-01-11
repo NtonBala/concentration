@@ -1,0 +1,41 @@
+{
+  "name": "concentration",
+  "version": "1.0.0",
+  "description": "JetRuby test task.",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "start": "react-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NtonBala/concentration.git"
+  },
+  "author": "NtonBala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NtonBala/concentration/issues"
+  },
+  "homepage": "https://NtonBala.github.io./concentration",
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-plugin-destructuring": "^2.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-react": "^7.5.1",
+    "gh-pages": "^1.1.0",
+    "react-scripts": "^0.2.1",
+    "redux-devtools-extension": "^2.13.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "redux-when": "^2.1.2"
+  }
+}
