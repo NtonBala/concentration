@@ -7,6 +7,7 @@ import {when} from 'redux-when';
 const root = document.getElementById('root');
 
 const store = configureStore();
+/*
 store.dispatch(when(
     state => state.test.data === 0,
     () => {
@@ -15,9 +16,10 @@ store.dispatch(when(
         };
     }
 ));
+*/
 
 const render = () => {
-    const App = require('./App').default;
+    const App = require('./containers/AppContainer').default;
 
     ReactDOM.render(
         <Provider store={store}>
@@ -28,7 +30,7 @@ const render = () => {
 };
 
 if (module.hot) {
-    module.hot.accept('./App', () => {
+    module.hot.accept('./containers/AppContainer', () => {
         setTimeout(render);
     });
 }

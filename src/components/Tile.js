@@ -9,8 +9,8 @@ const Back = () => (
     <div className='back tile'>Closed</div>
 );
 
-const Tile = ({opened, onClick}) => (
-    <div className='tile-container' onClick={onClick}>
+const Tile = ({opened, flip}) => (
+    <div className='tile-container' onClick={flip}>
         <div className={'tile' + (opened ? ' opened' : '')}>
             <Front>Opened</Front>
             <Back>Closed</Back>
@@ -19,7 +19,8 @@ const Tile = ({opened, onClick}) => (
 );
 
 Tile.propTypes = {
-    opened: PropTypes.bool
+    opened: PropTypes.bool.isRequired,
+    flip: PropTypes.func.isRequired
 };
 
 export default Tile;

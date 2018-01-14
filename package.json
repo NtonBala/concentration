@@ -31,11 +31,13 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
+    "randomcolor": "^0.5.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "redux-when": "^2.1.2"
+    "redux-when": "^2.1.2",
+    "uuid": "^3.1.0"
   }
 }
