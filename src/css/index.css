@@ -1,12 +1,26 @@
 h1 {
     color: yellowgreen;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tiles Board styles */
+.board {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 /* Tile styles */
 .tile-container {
-    width: 250px;
-    height: 250px;
-    margin: 15px;
+    width: 23%;
+    height: 100px;
+    box-sizing: border-box;
+    margin: 10px 0;
     display: block;
     perspective: 1000px;
 }

@@ -6,7 +6,7 @@ import TileContainer from '../containers/TileContainer';
 const Game = ({round, tiles}) => (
     <div>
         <h2>Round {round}</h2>
-        <ul>
+        <ul className='board'>
             {map(tiles, id => (
                 <TileContainer
                     key={id}
