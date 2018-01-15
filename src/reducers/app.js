@@ -4,7 +4,13 @@ const initialState = {
     isPlayed: false,
     game: {
         isPaused: false,
-        tiles: []
+        tiles: {
+            byId: {},
+            allIds: []
+        },
+        round: {
+            number: 0
+        }
     }
 };
 
@@ -15,7 +21,10 @@ const app = (state = initialState, action) => {
                 isPlayed: true,
                 game: assign({}, initialState.game, {
                     id: action.payload.id,
-                    tiles: action.payload.tiles
+                    tiles: {
+                        byId: action.payload.normalizedTiles.entities.tiles,
+                        allIds: action.payload.normalizedTiles.result
+                    }
                 })
             });
         case 'TOGGLE_PAUSE':

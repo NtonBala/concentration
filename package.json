@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
+    "normalizr": "^3.2.4",
     "prop-types": "^15.6.0",
     "randomcolor": "^0.5.3",
     "react": "^16.2.0",
