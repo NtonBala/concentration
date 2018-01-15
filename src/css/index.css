@@ -10,11 +10,18 @@ h1 {
     display: block;
     perspective: 1000px;
 }
+.tile-container.unclickable {
+    pointer-events: none;
+}
+.tile-container.removed {
+    visibility: hidden;
+}
 .tile-container .tile {
     width: 100%;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
+    pointer-events: inherit;
 }
 .tile-container .tile .front,
 .tile-container .tile .back {
@@ -30,7 +37,6 @@ h1 {
 }
 .tile-container .tile .front {
     z-index: 2;
-    background: #19489E;
     transform: rotateY(-180deg);
 }
 .tile-container .tile .back {

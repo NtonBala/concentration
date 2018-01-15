@@ -5,7 +5,7 @@ import {arrayOfTiles} from '../helpers/normalizr/schema';
 import {normalize} from 'normalizr';
 
 const newGame = () => (
-    (dispatch) => {
+    dispatch => {
         //get unique game id
         const id = v4();
 
