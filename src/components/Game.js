@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import {map} from 'lodash/collection';
 import TileContainer from '../containers/TileContainer';
 
-const Game = ({round, tiles}) => (
+const Game = ({isWon, round, tiles}) => (
     <div>
-        <h2>Round {round}</h2>
+        <h2>{isWon ? `Congratulations! You've succeeded with ${round} rounds!` : `Round ${round}`}</h2>
         <ul className='board'>
             {map(tiles, id => (
                 <TileContainer
@@ -18,6 +18,7 @@ const Game = ({round, tiles}) => (
 );
 
 Game.propTypes = {
+    isWon: PropTypes.bool.isRequired,
     round: PropTypes.number,
     tiles: PropTypes.arrayOf(PropTypes.string)
 };
