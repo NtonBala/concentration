@@ -4,11 +4,13 @@ const endRound = () => (
     (dispatch, getState) => {
         setTimeout(() => {
             const state = getState();
-            const tiles = state.app.game.round.tiles;
+            const roundTiles = state.app.game.round.tiles;
 
-            tiles[0].pairId === tiles[1].pairId ?
-                dispatch(roundPassed({tiles})) :
+            if (roundTiles[0].pairId === roundTiles[1].pairId) {
+                dispatch(roundPassed({roundTiles}));
+            } else {
                 dispatch(roundFailed());
+            }
         }, 3000);
     }
 );

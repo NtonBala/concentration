@@ -7,9 +7,9 @@ const Main = () => (
             <p>
                 The gameplay provides a board of tiles (4*4). Every 2 tiles
                 have the same color. In each round player selects 2 tiles.
-                The goal is to select two tiles with the same color to
-                remove them from the board. If player selects 2 tiles with
-                different colors then tiles are flipped and the player
+                Each round goal is to select 2 tiles with the same color to
+                remove them from the board. If tiles selected by the player are those
+                with different colors then these tiles are flipped and player
                 proceeds with the next round. The game is considered to be over
                 when all tiles are removed from the board.
             </p>

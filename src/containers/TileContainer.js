@@ -17,7 +17,7 @@ const mapState = (state, ownProps) => ({
 });
 
 const mapDispatch = (dispatch) => ({
-    flip: (payload) => dispatch(flippTile(payload))
+    flip: (payload) => dispatch(flippTile({roundTile: payload}))
 });
 
 const mergeProps = (stateProps, dispatchProps) => ({
